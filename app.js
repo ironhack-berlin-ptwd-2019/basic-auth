@@ -29,7 +29,7 @@ const MongoStore = require("connect-mongo")(session);
 
 app.use(session({
   secret: "anything",
-  cookie: { maxAge: 60 * 60 * 1000 }, // 1 hour
+  cookie: { maxAge: 60 * 60 * 1000 * 24 }, // 1 hour
   store: new MongoStore({ // this is going to create the `sessions` collection in the db
     mongooseConnection: mongoose.connection,
     ttl: 24 * 60 * 60 // 1 day
