@@ -15,7 +15,7 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login");
 });
 
-router.post('/signup', (req, res, next) => {
+router.post('/user-signup', (req, res, next) => {
   const pass = req.body.password;
   const salt = bcrypt.genSaltSync(bcryptSalt);
   const hashPass = bcrypt.hashSync(pass, salt);
