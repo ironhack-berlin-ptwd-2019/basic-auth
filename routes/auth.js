@@ -16,9 +16,9 @@ router.get("/login", (req, res, next) => {
 });
 
 router.post('/signup', (req, res, next) => {
-  const password = req.body.password;
+  const pass = req.body.password;
   const salt = bcrypt.genSaltSync(bcryptSalt);
-  const hashPass = bcrypt.hashSync(password, salt);
+  const hashPass = bcrypt.hashSync(pass, salt);
 
   User.create({
     username: req.body.username,
