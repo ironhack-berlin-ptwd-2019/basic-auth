@@ -11,7 +11,7 @@ router.get('/signup', (req, res, next) => {
   res.render('auth/signup');
 });
 
-router.get("/login", (req, res, next) => {
+router.get("/user-login", (req, res, next) => {
   res.render("auth/login");
 });
 
